@@ -10,8 +10,9 @@ gem 'bootstrap-sass', '3.0.3'
 gem 'simple_form', '3.0.1'
 
 # Use sqlite3 as the database for Active Record
+group :development, :test do
 gem 'sqlite3', '1.3.7'
-
+end
 group :development, :test do
   gem 'rspec-rails', '2.13.0'
   gem 'guard-rspec', '2.5.0'
