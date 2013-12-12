@@ -1,0 +1,25 @@
+
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "Sample App", root_path , id: "logo" %>
+    </div>
+  </div>
+</header>
+<body>
+<div class="container">
+    <%= simple_form_for(@user, :html => { :class => 'form-horizontal' }) do |f| %>
+      <%= f.input :name, :input_html => { :class => "span6" } %>
+      <%= f.input :email, :input_html => { :class => "span6" } %>
+      <%= f.input :remember_me, :as => :boolean %>
+      <%= f.button :submit, :class => 'btn btn-primary' %>
+      <%= submit_tag 'Cancel', :type => :reset, :class => "btn btn-danger" %>
+    <% end %>
+  </div>
+</body>
+<footer class="footer">
+  <small>
+    <a href="http://github.com/tarunjadhwani">Rails Application</a>
+    by Tarun Jadhwani
+  </small>
+</footer>
