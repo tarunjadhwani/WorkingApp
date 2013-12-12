@@ -2,11 +2,12 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
-gem 'bootstrap-sass', '2.3.2'
-gem 'bcrypt-ruby', '3.0.1'
-gem 'faker', '1.1.2'
-gem 'will_paginate', '3.0.4'
-gem 'bootstrap-will_paginate', '0.0.9'
+gem 'bootstrap-sass', '3.0.3'
+#gem 'bcrypt-ruby', '3.0.1'
+#gem 'faker', '1.1.2'
+#gem 'will_paginate', '3.0.4'
+#gem 'bootstrap-will_paginate', '0.0.9'
+gem 'simple_form', '3.0.1'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '1.3.7'
@@ -56,6 +57,11 @@ gem 'jbuilder', '1.0.1'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :production do
+    gem 'pg', '0.15.1'
+    gem 'rails_12factor', '0.0.2'
 end
 
 # Use ActiveModel has_secure_password

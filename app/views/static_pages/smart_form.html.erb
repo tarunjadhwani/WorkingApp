@@ -1,0 +1,30 @@
+
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "Sample App", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "smart_form", root_path %></li>
+          <li><%= link_to "Other Code", code_path %></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => 'well'}) do |f| %>
+    <%= f.input :email %>
+    <%= f.input :password %>
+    <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable?  %>
+
+    <%= f.button :submit, "Sign In" %>
+
+<% end %>
+
+<footer class="footer">
+  <small>
+    <a href="http://github.com/tarunjadhwani">Rails Application</a>
+    by Tarun Jadhwani
+  </small>
+</footer>
